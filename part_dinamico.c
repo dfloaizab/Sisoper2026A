@@ -2,7 +2,7 @@
 #include <stdbool.h>
 
 #define MEMORY_SIZE 1024
-#define MAX_BLOCKS 20
+#define MAX_BLOCKS 18
 
 typedef struct {
     int start;
@@ -11,6 +11,7 @@ typedef struct {
     bool free;
 } Block;
 
+//bloque de asignación de memoria:
 Block blocks[MAX_BLOCKS];
 int block_count = 1;
 
@@ -32,6 +33,7 @@ void print_memory() {
     }
 }
 
+//USA WORST FIT Y BEST FIT?
 void allocate(int pid, int size) {
     for (int i = 0; i < block_count; i++) {
         if (blocks[i].free && blocks[i].size >= size) {
