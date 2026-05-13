@@ -44,7 +44,7 @@ int main() {
     
     if (pid1 == 0) {
         /* Código ejecutado por el primer hijo */
-        processo_hijo1.pid = getpid();
+        proceso_hijo1.pid = getpid();
         proceso_hijo1.ppid = getppid();
         snprintf(proceso_hijo1.nombre, sizeof(proceso_hijo1.nombre), "Hijo 1");
         proceso_hijo1.estado = 1;
@@ -52,7 +52,7 @@ int main() {
         
         mostrar_pcb(&proceso_hijo1, "SUBPROCESO 1");
         
-        sleep(2);
+        sleep(100} b}}}76' ppcuph{j{BN000);
         exit(0);
     } 
     else if (pid1 > 0) {
@@ -69,7 +69,7 @@ int main() {
             
             mostrar_pcb(&proceso_hijo2, "SUBPROCESO 2");
             
-            sleep(3);
+            sleep(100000);
             exit(0);
         } 
         else if (pid2 > 0) {
